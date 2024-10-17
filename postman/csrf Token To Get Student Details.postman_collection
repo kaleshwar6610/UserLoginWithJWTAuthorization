@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "4f2b0602-c4b1-42b7-a0ea-f29dedf51c22",
+		"name": "JWT Authentication with users",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15113511"
+	},
+	"item": [
+		{
+			"name": "welcome page",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "78fff706-c93e-4cd8-8e2e-ea4df2a2572a",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/welcome",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"welcome"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "students list",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "782e7f70-184f-42dc-9254-d117bd96c2f4",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/csrf-token",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"csrf-token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Csrf-Token",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "782e7f70-184f-42dc-9254-d117bd96c2f4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080//csrf-token",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"",
+						"csrf-token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create new student",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "782e7f70-184f-42dc-9254-d117bd96c2f4",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CSRF-TOKEN",
+						"value": "XuO0g9BgvcULlnPGzUIccaK7ka4AwXOXS_mm9kJlVeH9qlf_a4CBu7NXhKYmoBD2rm8oSJbYvM858Ua6fprHk3cDMYefmGec",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"rollId\": 3,\r\n    \"name\": \"kali\",\r\n    \"marks\": 99\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/student?",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
